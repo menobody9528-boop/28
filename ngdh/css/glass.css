@@ -1,0 +1,50 @@
+/* ============================================================
+   glass.css — Glass-panel & Glass-tag components
+   ============================================================ */
+
+/* Glass panel enhancement */
+.glass-panel {
+  background: radial-gradient(18em 12em at 30% 30%, rgba(247, 147, 26, 0.08), transparent 50%),
+              radial-gradient(16em 10em at 70% 70%, rgba(255, 207, 139, 0.05), transparent 50%),
+              rgba(15, 23, 42, 0.5) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 1.45em 3.6em rgba(0, 0, 0, 0.5),
+              inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Glass Tag Effect */
+.glass-tag {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.glass-tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  animation: tag-shine 3s infinite;
+}
+.glass-tag:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+@keyframes tag-shine {
+  0% { left: -100%; }
+  20% { left: 200%; }
+  100% { left: 200%; }
+}

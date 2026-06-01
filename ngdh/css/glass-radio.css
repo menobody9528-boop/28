@@ -1,0 +1,128 @@
+/* Glass Radio Navigation - 5 buttons adaptive */
+/* From Uiverse.io by chase2k25, adapted for 5-item navigation */
+
+.glass-radio-group {
+  --bg: rgba(255, 255, 255, 0.06);
+  --text: #ffffff;
+
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  background: var(--bg);
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    inset 1px 1px 4px rgba(255, 255, 255, 0.2),
+    inset -1px -1px 6px rgba(0, 0, 0, 0.3),
+    0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  width: 100%;
+}
+
+.glass-radio-group input {
+  display: none;
+}
+
+.glass-radio-group label {
+  flex: 1;
+  min-width: 0;
+  min-height: clamp(38px, 5vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(10px, 2vw, 18px);
+  padding: clamp(0.5rem, 1.2vw, 1rem) clamp(0.4rem, 1.5vw, 1.8rem);
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 6px rgba(255,255,255,0.3);
+}
+
+.glass-radio-group label:hover {
+  color: #fff;
+  text-shadow: 0 0 12px rgba(255,255,255,0.6);
+}
+
+.glass-radio-group input:checked + label {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(183,109,255,0.8), 0 0 20px rgba(183,109,255,0.4);
+}
+
+.glass-glider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc(100% / 5);
+  border-radius: 1rem;
+  z-index: 1;
+  transition:
+    transform 0.5s cubic-bezier(0.37, 1.95, 0.66, 0.56),
+    background 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out;
+}
+
+/* Nav item 1 - 活动优惠 */
+#nav-promotion:checked ~ .glass-glider {
+  transform: translateX(0%);
+  background: linear-gradient(135deg, rgba(183, 109, 255, 0.35), rgba(183, 109, 255, 0.6));
+  box-shadow:
+    0 0 18px rgba(183, 109, 255, 0.5),
+    0 0 10px rgba(183, 109, 255, 0.3) inset;
+}
+
+/* Nav item 2 - 预测试玩 */
+#nav-predict:checked ~ .glass-glider {
+  transform: translateX(100%);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.35), rgba(255, 204, 0, 0.6));
+  box-shadow:
+    0 0 18px rgba(255, 215, 0, 0.5),
+    0 0 10px rgba(255, 235, 150, 0.3) inset;
+}
+
+/* Nav item 3 - 官方下载 */
+#nav-download:checked ~ .glass-glider {
+  transform: translateX(200%);
+  background: linear-gradient(135deg, rgba(192, 192, 192, 0.35), rgba(224, 224, 224, 0.6));
+  box-shadow:
+    0 0 18px rgba(192, 192, 192, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.3) inset;
+}
+
+/* Nav item 4 - VIP接待 */
+#nav-vip:checked ~ .glass-glider {
+  transform: translateX(300%);
+  background: linear-gradient(135deg, rgba(160, 216, 255, 0.35), rgba(160, 216, 255, 0.6));
+  box-shadow:
+    0 0 18px rgba(160, 216, 255, 0.5),
+    0 0 10px rgba(200, 240, 255, 0.3) inset;
+}
+
+/* Nav item 5 - 避坑公示 */
+#nav-warning:checked ~ .glass-glider {
+  transform: translateX(400%);
+  background: linear-gradient(135deg, rgba(255, 99, 99, 0.35), rgba(255, 99, 99, 0.6));
+  box-shadow:
+    0 0 18px rgba(255, 99, 99, 0.5),
+    0 0 10px rgba(255, 150, 150, 0.3) inset;
+}
+
+/* Page content iframe */
+.page-content-iframe {
+  width: 100%;
+  max-width: 100%;
+  min-height: 500px;
+  height: auto;
+  border: none;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 0.5px rgba(255, 255, 255, 0.08);
+}
