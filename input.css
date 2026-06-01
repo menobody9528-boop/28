@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@source "./";
+
+@theme {
+  --color-on-error: #690005;
+  --color-tertiary: #adc6ff;
+  --color-inverse-on-surface: #283044;
+  --color-primary-fixed-dim: #ddb7ff;
+  --color-surface-container-high: #222a3d;
+  --color-background: #0b1326;
+  --color-on-secondary-fixed: #341100;
+  --color-on-primary: #490080;
+  --color-outline: #988d9f;
+  --color-on-primary-fixed-variant: #6900b3;
+  --color-inverse-primary: #842bd2;
+  --color-on-tertiary-fixed: #001a42;
+  --color-secondary-fixed-dim: #ffb690;
+  --color-on-surface-variant: #cfc2d6;
+  --color-on-background: #dae2fd;
+  --color-tertiary-fixed-dim: #adc6ff;
+  --color-on-error-container: #ffdad6;
+  --color-tertiary-container: #4d8eff;
+  --color-primary: #ddb7ff;
+  --color-on-primary-container: #400071;
+  --color-surface-bright: #31394d;
+  --color-surface-container-low: #131b2e;
+  --color-surface-container-lowest: #060e20;
+  --color-primary-container: #b76dff;
+  --color-secondary-fixed: #ffdbca;
+  --color-surface: #0b1326;
+  --color-error-container: #93000a;
+  --color-on-secondary-fixed-variant: #783200;
+  --color-tertiary-fixed: #d8e2ff;
+  --color-secondary: #ffb690;
+  --color-on-surface: #dae2fd;
+  --color-surface-variant: #2d3449;
+  --color-on-tertiary: #002e6a;
+  --color-secondary-container: #ec6a06;
+  --color-on-secondary-container: #4a1c00;
+  --color-outline-variant: #4d4354;
+  --color-on-primary-fixed: #2c0051;
+  --color-surface-tint: #ddb7ff;
+  --color-surface-container-highest: #2d3449;
+  --color-inverse-surface: #dae2fd;
+  --color-on-tertiary-fixed-variant: #004395;
+  --color-primary-fixed: #f0dbff;
+  --color-on-tertiary-container: #00285d;
+  --color-surface-dim: #0b1326;
+  --color-surface-container: #171f33;
+  --color-error: #ffb4ab;
+  --color-on-secondary: #552100;
+
+  --radius-default: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  --spacing-stack-md: 16px;
+  --spacing-stack-lg: 32px;
+  --spacing-slot-size: 64px;
+  --spacing-container-padding: 32px;
+  --spacing-stack-sm: 8px;
+  --spacing-gutter: 16px;
+  --spacing-base: 4px;
+
+  --font-body-lg: "Hanken Grotesk";
+  --font-h2: "Sora";
+  --font-h3: "Sora";
+  --font-h1: "Sora";
+  --font-body-md: "Hanken Grotesk";
+  --font-code: "JetBrains Mono";
+  --font-label-caps: "JetBrains Mono";
+
+  --text-body-lg: 18px / 1.6;
+  --text-h2: 32px / 1.2;
+  --text-h3: 24px / 1.3;
+  --text-h1: 48px / 1.1;
+  --text-body-md: 16px / 1.6;
+  --text-code: 14px / 1.5;
+  --text-label-caps: 12px / 1;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex,nofollow"/>
+  <title>请在浏览器打开</title>
+  <link rel="stylesheet" href="./css/fonts.css"/>
+  <link rel="stylesheet" href="./css/open-in-browser.css"/>
+  <script src="./js/browser-guard.js"></script>
+</head>
+<body>
+  <main class="page">
+    <div class="top-note">
+      <img src="./images/NGlog.webp" alt="南宫集团 Logo"/>
+      <span>微信 QQ请勿相信陌生人，谨防诈骗。温馨提示，请按图示在系统浏览器中打开。</span>
+    </div>
+
+    <section class="phones">
+      <article class="phone">
+        <div class="screen">
+          <div class="notch"></div>
+          <div class="status-bar">
+            <span>09:22</span>
+            <span>5G &#8226; 100%</span>
+          </div>
+          <div class="browser-bar">
+            <span class="browser-action">&#10005;</span>
+            <div class="browser-address">2828.lol</div>
+            <span class="browser-action">&#8942;</span>
+          </div>
+
+          <div class="hero-strip">
+            <div class="hero-copy">
+              点击右上角
+              <span class="step-bubble">&#8942;</span>
+              在浏览器打开
+              <small>苹果设备 / 安卓设备 均可按此方式继续访问</small>
+              <div class="hero-icons">
+                <span class="hero-icon">S</span>
+                <span class="hero-icon">A</span>
+                <span class="hero-icon">&#10148;</span>
+                <span class="hero-icon">&#10148;</span>
+                <span class="hero-icon">&#10148;</span>
+              </div>
+            </div>
+            <div class="pointer-hand">☝</div>
+          </div>
+
+          <div class="guide-area">
+            <div class="curve"></div>
+            <div class="step step-top">1. 点击右上角 <span class="step-bubble">&#8942;</span></div>
+
+            <div class="mini-phone">
+              <div class="mini-phone-screen">
+                <div class="mini-phone-header"></div>
+                <div class="mini-phone-body">
+                  <div class="mini-phone-line"></div>
+                  <div class="mini-phone-line short"></div>
+                  <div class="mini-phone-line"></div>
+                  <div class="mini-phone-line short"></div>
+                  <div class="mini-toolbar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="step step-bottom">2. 在菜单中点击 <strong>用浏览器打开</strong></div>
+            <div class="open-browser-pill">
+              <div class="pill-icon">&#9711;</div>
+              <div>用浏览器打开</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="card-panel">
+      <div class="card-head">
+        <div>
+          <h1 class="card-title">安全访问，谨防诈骗</h1>
+          <p class="card-subtitle">如果未自动跳转，可复制以下链接，粘贴到 Safari、Chrome 或系统默认浏览器中继续访问。</p>
+        </div>
+      </div>
+
+      <div class="target">
+        <span class="target-label">Target URL</span>
+        <div class="target-url" id="target-url">正在读取目标地址...</div>
+      </div>
+
+      <div class="actions">
+        <a class="button primary" id="open-link" href="./index.html">继续访问</a>
+        <button class="button" id="copy-link" type="button">复制链接</button>
+      </div>
+
+      <div class="footer">已开启安全访问..</div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const pageUrl = new URL(window.location.href);
+      const target = pageUrl.searchParams.get("target") || new URL("./home.html", pageUrl.origin).toString();
+      const targetUrl = document.getElementById("target-url");
+      const openLink = document.getElementById("open-link");
+      const copyLink = document.getElementById("copy-link");
+
+      if (targetUrl) targetUrl.textContent = target;
+      if (openLink) openLink.href = target;
+
+      if (copyLink) {
+        copyLink.addEventListener("click", async function () {
+          try {
+            await navigator.clipboard.writeText(target);
+            copyLink.textContent = "已复制链接";
+            setTimeout(function() {
+              copyLink.textContent = "复制链接";
+            }, 2000);
+          } catch (error) {
+            if (targetUrl) targetUrl.textContent = "复制失败，请长按手动复制: " + target;
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

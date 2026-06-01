@@ -1,0 +1,121 @@
+/* ============================================================
+   standalone-page.css — Sub-page shell layout (iframe pages)
+   ============================================================ */
+
+.standalone-page-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 1.5rem;
+  background: radial-gradient(18em 12em at 50% 50%, rgba(247, 147, 26, 0.12), transparent 60%),
+              rgba(6, 14, 32, 0.95) !important;
+  border-bottom: 1px solid rgba(247, 147, 26, 0.2) !important;
+}
+
+.standalone-page-topbar-text {
+  padding: 0 1rem;
+}
+
+.standalone-page-header {
+  position: fixed;
+  top: 1.5rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  height: 3.5rem;
+  padding: 0 1rem;
+  backdrop-filter: blur(24px);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.25);
+}
+
+.standalone-page-brand {
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.standalone-page-home-link {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid currentColor;
+  font-weight: 700;
+}
+
+.standalone-page-main {
+  min-height: 100vh;
+  padding: 6rem 1rem 3rem;
+}
+
+.standalone-page-main-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.standalone-page-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.standalone-page-title-panel {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.standalone-page-card {
+  width: 100%;
+  max-width: 32rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.standalone-page-card-image {
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto 1.5rem;
+  border-radius: 0.5rem;
+  object-fit: contain;
+  background: #fff;
+}
+
+.standalone-page-cta {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: opacity 0.2s ease;
+}
+.standalone-page-cta:hover {
+  opacity: 0.9;
+}
+/* Sub-page h1 glow highlight — inherits text color automatically */
+.standalone-page-card h1,
+.standalone-page-title-panel h1 {
+  text-shadow:
+    0 0 8px currentColor,
+    0 0 20px currentColor,
+    0 0 40px rgba(221,183,255,0.15);
+  animation: h1-pulse 3s ease-in-out infinite;
+}
+
+@keyframes h1-pulse {
+  0%, 100% {
+    text-shadow:
+      0 0 8px currentColor,
+      0 0 20px currentColor,
+      0 0 40px rgba(221,183,255,0.15);
+  }
+  50% {
+    text-shadow:
+      0 0 12px currentColor,
+      0 0 30px currentColor,
+      0 0 60px rgba(221,183,255,0.25);
+  }
+}

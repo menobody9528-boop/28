@@ -1,0 +1,133 @@
+/* Local Fonts - Sora */
+@font-face {
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Sora-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/Sora-600.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/Sora-700.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/Sora-800.ttf') format('truetype');
+}
+
+/* Local Fonts - Hanken Grotesk */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/HankenGrotesk-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/HankenGrotesk-600.ttf') format('truetype');
+}
+
+/* Local Fonts - JetBrains Mono */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/JetBrainsMono-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/JetBrainsMono-700.ttf') format('truetype');
+}
+
+/* App Icon - Metallic Gradient with Shine Effect */
+/* From Uiverse.io by chase2k25 */
+.app-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #e0e0e0, #c0c0c0);
+  border-radius: 20px;
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.3),
+    -6px -6px 12px rgba(255, 255, 255, 0.3),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.app-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+  background-size: 200% 200%;
+  animation: app-icon-shine 2s infinite ease-in-out;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+@keyframes app-icon-shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.app-icon:hover {
+  transform: scale(1.05);
+  box-shadow:
+    8px 8px 16px rgba(0, 0, 0, 0.4),
+    -8px -8px 16px rgba(255, 255, 255, 0.4),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.app-icon img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 14px;
+	position: relative;
+	z-index: 1;
+}

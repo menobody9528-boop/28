@@ -1,0 +1,7 @@
+node_modules/
+ssh_key_new
+ssh_key_new.pub
+.DS_Store
+*.log
+.env
+.env.local
