@@ -25,6 +25,7 @@ header {
               radial-gradient(18em 12em at 80% 80%, rgba(255, 207, 139, 0.05), transparent 50%),
               rgba(11, 16, 32, 0.85) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 0 0 1rem 1rem;
 }
 
 /* Footer styling */
